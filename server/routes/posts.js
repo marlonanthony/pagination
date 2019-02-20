@@ -5,8 +5,10 @@ const Post = require('../models/Post')
 
 router.get('/', (req, res) => {
   const pageOptions = {
-    page: req.query.page || 0,
-    limit: req.query.limit || 10
+    page: parseInt(req.query.page) || 0, 
+    limit: parseInt(req.query.limit) || 10
+    // offset: (page - 1) * 10 
+    // offset = (page - 1) * itemsPerPage
   }
 
   Post.find()

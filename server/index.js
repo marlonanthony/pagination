@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()) 
 
 // GraphQL TEST
-app.use('/graphql', graphqlHTTP({
-  schema,
-  graphiql: true
-}))
+// app.use('/graphql', graphqlHTTP({
+//   schema,
+//   graphiql: true
+// }))
 
 app.get('/', (req, res) => res.send('Hello'))
 
